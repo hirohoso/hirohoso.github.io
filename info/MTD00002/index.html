@@ -27,6 +27,14 @@
             font-color: gray;
         }
     </style>
+    <script type="text/javascript">
+        function moveWithQS(target) {
+            console.log(target);
+            var qs = window.location.search || '';
+            console.log(qs);
+            window.location.href = target + '?' + qs;
+        }
+    </script>
 </head>
 <body>
     <div class="title">
@@ -34,7 +42,7 @@
     </div>
     <div class="desc">
         前回調剤されたお薬の期限が近づいています。かかりつけの医師と相談をして今後の治療方法を決めましょう。<br/>
-        高脂血症については、<a href="http://www.hyperlipemia.info/attention.html">高脂血症.info</a><span class="exp">(http://www.hyperlipemia.info)</span>の情報もご覧ください。
+        高脂血症については、<a href="javascript:void(0)" onclick="moveWithQS('http://www.hyperlipemia.info/attention.html'); return false;">高脂血症.info</a><span class="exp">(http://www.hyperlipemia.info)</span>の情報もご覧ください。
     </div>
 </body>
 </html>
